@@ -188,6 +188,8 @@ body {
     font-size: 1.8rem;
     line-height: 1.75em;
     color: #3A4145;
+    background: #34C2A6;
+
     -webkit-font-feature-settings: 'kern' 1;
     -moz-font-feature-settings: 'kern' 1;
     -o-font-feature-settings: 'kern' 1;
@@ -195,11 +197,11 @@ body {
 }
 
 ::-moz-selection {
-    background: #D6EDFF;
+    background: #34C2A6;
 }
 
 ::selection {
-    background: #D6EDFF;
+    background: #34C2A6;
 }
 
 h1, h2, h3,
