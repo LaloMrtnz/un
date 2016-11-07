@@ -1,0 +1,137 @@
+//General
+
+html {
+  height: 100%;
+  max-height: 100%;
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  height: 100%;
+  max-height: 100%;
+  font-family: $Roboto;
+  letter-spacing: 0.01rem;
+  font-size: 1.6rem;
+  line-height: 1.75em;
+  color: $main;
+  background: white;
+
+}
+
+/* Wraps the main content & footer */
+.site-wrapper {
+  position: relative;
+  padding-top: 120px;
+  z-index: 10;
+  background: white;
+
+  //animation: appear 1s ease-in;
+
+  @include outer-container(80%)
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  } to {
+  opacity: 1;
+  }
+}
+
+@include selection {
+  background: transparentize($main, .90);
+}
+
+/* The details of your blog. Defined in ghost/settings/ */
+
+.loop {
+  position: relative;
+  display: block;
+  @include span-columns(6);
+  @include omega(2n);
+  @include pad(25px 15px);
+
+  text-decoration: none;
+  color:$main;
+  opacity: 1;
+
+  visibility: hidden;//for scrollReveal.js
+
+
+  &:hover #underline {
+    animation: dash .5s ease-in both;
+  }
+}
+
+.loop-header {
+  margin-bottom: 8px;
+}
+
+.loop-title {
+  display: inline-block;
+  font-family: $Permanent-Marker;
+  font-size: 26px;
+  font-weight: lighter;
+  line-height: 26px;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.loop-excerpt p {
+    font-size: 1em;
+    line-height: 1.4em;
+    text-align: justify;
+    font-weight: 200;
+    color: lighten($main, 20);
+    margin:0;
+}
+
+.underline {
+  position: absolute;
+}
+
+#underline {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.loop-date {
+    font-size: 20px;
+    font-family: $Gochi-Hand;
+    color:$secondary;
+    margin: 0;
+  }
+
+@media (max-width: 900px) {
+  .site-wrapper {
+    padding-top: 110px;
+    @include outer-container(90%)
+  }
+
+  .loop {
+    @include span-columns(10);
+    @include shift(1);
+    padding: 30px 0;
+  }
+
+  .underline {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .site-wrapper {
+    @include outer-container(90%);
+  }
+}

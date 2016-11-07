@@ -1,25 +1,31 @@
-{{!-- Previous/next page links - only displayed on page 2+ --}}
-<div class="extra-pagination inner">
-    {{pagination}}
-</div>
+
 
 {{!-- This is the post loop - each post will be output using this markup --}}
 {{#foreach posts}}
-<article class="{{post_class}}">
-    <header class="post-header">
-        <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
-    </header>
-    <section class="post-excerpt">
-        <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
-    </section>
-    <footer class="post-meta">
-        {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="{{author.name}}" nopin="nopin" />{{/if}}
-        {{author}}
-        {{tags prefix=" on "}}
-        <time class="post-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="DD MMMM YYYY"}}</time>
-    </footer>
-</article>
+  <a href="{{url}}" class="loop">
+      <header  class="loop-header">
+          <h2  class="loop-title">{{title}}</h2>
+          <div class="underline"> <svg class="underline" width="100%" height="8px" preserveAspectRatio="none" viewBox="0 0 201 8" version="1.1">
+                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <g id="My-Screen-Res" transform="translate(-142.000000, -231.000000)" stroke="#363636" stroke-width="3">
+                        <g id="Group" transform="translate(143.000000, 195.000000)">
+                            <path d="M0.418828403,39.9441253 C67.4837668,35.2895171 131.094102,39.7062561 199,42.605404" id="underline"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+          </div>
+      </header>
+      <time class="loop-date" datetime="{{date format="MMM DD, YYYY"}}">{{date format="MMM DD, YYYY"}}</time>
+      <section class="loop-excerpt">
+          <p>{{excerpt words="26"}}</p>
+      </section>
+  </a>
 {{/foreach}}
 
-{{!-- Previous/next page links - displayed on every page --}}
-{{pagination}}
+
+
+
+
+{{!-- Previous/next page links - displayed on every page
+{{pagination}}--}}

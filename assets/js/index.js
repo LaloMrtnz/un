@@ -10,15 +10,16 @@
 
     $document.ready(function () {
 
+      $(".loop").each(function() {
+        var correct = $(this).find(".loop-title").width()
+        $(this).find("div").width(correct);
+      });
+
         var $postContent = $(".post-content");
         $postContent.fitVids();
 
         $(".scroll-down").arctic_scroll();
 
-        $(".menu-button, .nav-cover, .nav-close").on("click", function(e){
-            e.preventDefault();
-            $("body").toggleClass("nav-opened nav-closed");
-        });
 
     });
 

@@ -1,26 +1,8 @@
-# un 
+# UN 
 
 A theme for [Ghost Blogging Framwork](http://github.com/tryghost/ghost/).
 
-### Screenshots
-
-![Home](https://dl.dropboxusercontent.com/u/85491591/un/tes2.png)
-
-![Post](https://dl.dropboxusercontent.com/u/85491591/un/tes3.png)
-
-![Author](https://dl.dropboxusercontent.com/u/85491591/un/tes1.png)
-
-
-
-
-
-
-
-
-
-
-____
-### Copyright & License
+## Copyright & License
 
 Copyright (c) 2013-2016 Ghost Foundation - Released under the MIT License.
 
